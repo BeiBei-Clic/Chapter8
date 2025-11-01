@@ -399,7 +399,7 @@ def main(sample_size=1000, population_size=200, generations=300):
 if __name__ == "__main__":
     # 可以通过修改这些参数来调试不同的超参数设置
     results = main(
-        sample_size=10,    # 每个数据集使用的样本数
-        population_size=30, # 种群个体数
-        generations=20      # 迭代代数
+        sample_size=100,    # 每个数据集使用的样本数
+        population_size=300, # 种群个体数
+        generations=200      # 迭代代数
     )

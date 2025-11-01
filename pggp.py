@@ -813,7 +813,7 @@ def run_experiments():
         # 运行10次实验
         for seed in seeds:
             print(f"  运行种子 {seed}", end=" ... ")
-            result = run_single_experiment(filename=dataset, seed=seed, data_count=10, generations=2, population_size=3)
+            result = run_single_experiment(filename=dataset, seed=seed, data_count=10, generations=300, population_size=200)
             result['seed'] = seed
             results.append(result)
             print(f"完成 (RMSE: {result['test_rmse']:.6f})")
