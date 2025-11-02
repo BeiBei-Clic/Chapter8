@@ -91,13 +91,17 @@ def plot_comparison(pggp_stats, stgp_stats, dataset_name, output_dir):
     # 设置坐标轴
     plt.xlim(1, max(len(pggp_median), len(stgp_median)))
     
-    # 保存图片
-    output_path = os.path.join(output_dir, f'comparison_{dataset_name}.png')
+    # 保存图片 - 使用矢量图格式
+    output_path_svg = os.path.join(output_dir, f'comparison_{dataset_name}.svg')
+    output_path_pdf = os.path.join(output_dir, f'comparison_{dataset_name}.pdf')
     plt.tight_layout()
-    plt.savefig(output_path, dpi=1200, bbox_inches='tight')
+    
+    # 保存为SVG和PDF两种矢量图格式
+    plt.savefig(output_path_svg, format='svg', bbox_inches='tight')
+    plt.savefig(output_path_pdf, format='pdf', bbox_inches='tight')
     plt.close()
     
-    print(f"已生成比较图: {output_path}")
+    print(f"已生成比较图: {output_path_svg} 和 {output_path_pdf}")
 
 def main():
     """主函数"""
