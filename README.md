@@ -30,6 +30,34 @@
 - **文件**: `NeSymReS.py`
 - **简介**: 基于神经网络的符号回归方法，使用深度学习模型直接学习符号表达式。
 
+### 4. 算法比较工具
+- **文件**: `compare_algorithms.py`
+- **简介**: 用于比较不同算法性能的可视化工具。该脚本可以加载PGGP和stGP算法的运行结果，计算统计指标（中位数、四分位数），并生成对比图表。支持输出为SVG和PDF格式的矢量图，便于在论文和报告中使用。
+
+## 环境配置
+
+本项目使用uv作为包管理器。为了方便用户快速配置环境，我们提供了requirements.txt文件，包含了所有必要的依赖包。
+
+### 安装步骤
+
+1. 安装uv包管理器（如果尚未安装）：
+   ```bash
+   pip install uv
+   ```
+
+2. 使用uv创建虚拟环境并安装依赖：
+   ```bash
+   uv venv
+   source .venv/bin/activate  # Linux/Mac
+   # 或者在Windows上使用 .venv\Scripts\activate
+   uv pip install -r requirements.txt
+   ```
+
+3. 或者，如果您想直接在当前环境中安装所有依赖：
+   ```bash
+   uv pip install -r requirements.txt
+   ```
+
 ## 快速使用
 
 运行pggp实验（另外两个类似）：
